@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
-  // 5. Redirect to /dashboard if the user is authenticated
+  // 5. Redirect to / if the user is authenticated
   if (isPublicRoute && session) {
     return NextResponse.redirect(new URL("/", request.url));
   }

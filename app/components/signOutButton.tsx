@@ -1,23 +1,23 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { signOut } from "firebase/auth";
-import { auth } from "@/lib/firebase/firebase";
 
 export default function SignOutButton() {
   const router = useRouter();
 
   const handleLogout = async () => {
-    await fetch("/api/sign-out", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    try {
+      await fetch("/api/sign-out", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-    await signOut(auth);
-
-    router.push("/login");
+      router.push("/login");
+    } catch {
+      alert("Error logging out. Please try again.");
+    }
   };
 
   return (

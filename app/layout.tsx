@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { russoOne } from "./ui/fonts";
-import { AuthProvider } from "./components/authContext";
 
 export const metadata: Metadata = {
   title: "Auth Tutorial",
@@ -16,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${russoOne.className} antialiased bg-slate-950`}>
-        <AuthProvider>{children}</AuthProvider>
+        {children}
       </body>
     </html>
   );
