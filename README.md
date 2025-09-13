@@ -5,6 +5,14 @@
 A simple authentication flow using Next.js, Firebase Authentication, and Google reCAPTCHA for bot protection.
 The app fetches an idToken on the client side, exchanges it on a Next.js API route, and creates a secure Firebase Session Cookie for server-side validation.
 
+## Live Demo
+
+🌐 [Web App (Vercel)](https://auth-tutorial-16oa.vercel.app/)
+
+- Create a **test account** to explore the signup and login flow.
+- Since this is only a demo project, **don’t use your real email or password** — use a disposable account (e.g., Mailinator, Temp Mail).
+- You’ll need to **verify your email** before logging in.
+
 **Setup**
 
 - Create firebase project and enable Authetication

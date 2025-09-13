@@ -98,6 +98,7 @@ export default function LoginPage() {
 
       if (!res.ok) {
         setError(data.error || "Failed to log in");
+        setLoading(false);
         return;
       }
 
@@ -105,11 +106,11 @@ export default function LoginPage() {
     } catch (error) {
       if (error instanceof FirebaseError) {
         setError(getFriendlyError(error));
+        setLoading(false);
       } else {
         setError("An unknown error occurred");
+        setLoading(false);
       }
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -155,9 +156,7 @@ export default function LoginPage() {
 
       await sendEmailVerification(cred.user);
 
-      setSuccess(
-        "We've sent you a verification email. Please confirm your address before logging in. Check your inbox and spam folder."
-      );
+      setSuccess("We've sent you a verification email.");
 
       setEmail("");
       setPassword("");
