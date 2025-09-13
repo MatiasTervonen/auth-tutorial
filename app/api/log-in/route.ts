@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
 
     return res;
   } catch (error) {
-    console.error("Error verifying reCAPTCHA:", error);
+    console.error("Error creating session cookie", error);
     return NextResponse.json(
       { error: "Unknown server error" },
       { status: 500 }

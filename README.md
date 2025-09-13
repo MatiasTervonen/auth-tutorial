@@ -15,9 +15,9 @@ The app fetches an idToken on the client side, exchanges it on a Next.js API rou
 
 **Setup**
 
-- Create firebase project and enable Authetication
+- Create firebase project and enable authentication
 - Add Firebase client and admin connections to your Next.js app.
-- On Google cloud add reCAPTCHA to your project and configure keys in your env.local.
+- On Google cloud, add reCAPTCHA to your project and configure keys in your env.local.
 
 <pre>
 NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_site_key
