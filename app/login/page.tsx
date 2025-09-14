@@ -173,7 +173,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-full px-2 bg-gradient-to-tr from-slate-950 via-slate-950 to-blue-900 max-w-3xl mx-auto">
+    <div className="flex flex-col justify-center items-center min-h-[100dvh] w-full px-2 bg-gradient-to-tr from-slate-950 via-slate-950 to-blue-900 max-w-3xl mx-auto">
       <Script
         src={`https://www.google.com/recaptcha/enterprise.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
       />
@@ -234,7 +234,7 @@ export default function LoginPage() {
             <p className="text-gray-400 text-center py-5">
               Don&apos;t have an account?
               <span
-                className="text-blue-500 cursor-pointer ml-2"
+                className="text-blue-500 cursor-pointer ml-2 whitespace-nowrap"
                 onClick={() => {
                   if (loading) return;
                   setActiveForm(!activeForm);
